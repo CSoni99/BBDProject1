@@ -67,6 +67,7 @@ public class LoginPage extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Intent intent= new Intent(LoginPage.this,userDetails.class);
+                    FirebaseAuth.getInstance().getCurrentUser().updateEmail(email);
                     startActivity(intent);
                     Toast.makeText(LoginPage.this, "Successful...", Toast.LENGTH_SHORT).show();
                 }

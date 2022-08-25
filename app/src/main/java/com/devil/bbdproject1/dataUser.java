@@ -7,6 +7,9 @@ public class dataUser {
     String email;
     String phone;
     String college;
+    dataUser(){
+
+    }
     dataUser(String name,String email,String phone,String college){
         this.name = name;
         this.email = email;
